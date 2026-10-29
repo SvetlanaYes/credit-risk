@@ -1,0 +1,50 @@
+{
+  "rows": 20000,
+  "columns": 16,
+  "target_ones": 3146,
+  "target_one_rate": 0.1573,
+  "index_is_unique": false,
+  "duplicate_index_beyond_first": 7000,
+  "file_blocks": {
+    "1": 13000,
+    "2": 7000
+  },
+  "model_features": [
+    "client_history_in_bank",
+    "age",
+    "income",
+    "employment_years",
+    "loan_amount",
+    "interest_rate",
+    "num_loans",
+    "credit_utilization",
+    "past_due_30",
+    "past_due_60",
+    "past_due_90",
+    "past_default",
+    "dti",
+    "region_risk"
+  ],
+  "excluded_from_models": [
+    "recovery_flag_after_90d"
+  ],
+  "quality_flags": {
+    "age_equal_99": 120,
+    "income_equal_30000": 12505,
+    "income_missing": 700,
+    "utilization_missing": 17,
+    "dti_ratio_near_one": 19227,
+    "dti_ratio_near_ten": 73,
+    "past_due_60_gt_30": 2558,
+    "past_due_90_gt_60": 797,
+    "delinquency_gt_num_loans": 773,
+    "age_minus_employment_below_14": 970,
+    "interest_rate_min": 0.03,
+    "interest_rate_max": 0.2427936306365617,
+    "recovery_flag_positive": 3148
+  },
+  "raw_sha256": "9d69a6155fec0e9b006a4c09594f676cd4ae57a4af4ca588f2c8bd32868ca11e",
+  "values_changed": false,
+  "rows_dropped": false,
+  "split_created": false
+}

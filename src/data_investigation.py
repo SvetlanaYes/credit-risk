@@ -83,9 +83,9 @@ def main() -> None:
     )
 
     block_missing = pd.DataFrame({
-        "block": block,
-        "income_missing": data["income"].isna(),
-        "utilization_missing": data["credit_utilization"].isna(),
+        "block": block.to_numpy(),
+        "income_missing": data["income"].isna().to_numpy(),
+        "utilization_missing": data["credit_utilization"].isna().to_numpy(),
     }).groupby("block").sum()
     block_missing.to_csv(REPORT_DIR / "missingness_by_block.csv")
 

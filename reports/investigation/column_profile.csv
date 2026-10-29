@@ -1,0 +1,17 @@
+column,dtype,missing_count,missing_percent,distinct_nonmissing
+client_history_in_bank,int64,0,0.0,59
+age,float64,0,0.0,18343
+income,float64,700,3.5,6796
+employment_years,float64,0,0.0,18704
+loan_amount,float64,0,0.0,19979
+interest_rate,float64,0,0.0,19984
+num_loans,int64,0,0.0,14
+credit_utilization,float64,17,0.085,19983
+past_due_30,int64,0,0.0,5
+past_due_60,int64,0,0.0,5
+past_due_90,int64,0,0.0,3
+past_default,int64,0,0.0,2
+recovery_flag_after_90d,int64,0,0.0,2
+dti,float64,0,0.0,19986
+region_risk,int64,0,0.0,3
+default,int64,0,0.0,2
