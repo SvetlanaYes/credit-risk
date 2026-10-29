@@ -1,0 +1,16 @@
+{
+  "family": "random_forest",
+  "config": "random_forest_leaf50",
+  "spec": {
+    "min_samples_leaf": 50
+  },
+  "mean_fold_log_loss": 0.39650625283492674,
+  "pooled_oof": {
+    "roc_auc": 0.7017424287226891,
+    "average_precision": 0.3485405400371025,
+    "log_loss": 0.3965062528349268,
+    "brier_score": 0.12028406415598547,
+    "accuracy_at_0_5": 0.8461875,
+    "recall_at_0_5": 0.09495431068732618
+  }
+}

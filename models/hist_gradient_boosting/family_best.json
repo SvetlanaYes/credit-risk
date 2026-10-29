@@ -1,0 +1,16 @@
+{
+  "family": "hist_gradient_boosting",
+  "config": "hist_gb_leaves7",
+  "spec": {
+    "max_leaf_nodes": 7
+  },
+  "mean_fold_log_loss": 0.3927412388580864,
+  "pooled_oof": {
+    "roc_auc": 0.7100069891864299,
+    "average_precision": 0.35954145906421686,
+    "log_loss": 0.3927412388580864,
+    "brier_score": 0.11924403814082717,
+    "accuracy_at_0_5": 0.847875,
+    "recall_at_0_5": 0.08621374652363925
+  }
+}

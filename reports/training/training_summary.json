@@ -1,0 +1,81 @@
+{
+  "features": [
+    "client_history_in_bank",
+    "age",
+    "income",
+    "employment_years",
+    "loan_amount",
+    "interest_rate",
+    "num_loans",
+    "credit_utilization",
+    "past_due_30",
+    "past_due_60",
+    "past_due_90",
+    "past_default",
+    "dti",
+    "region_risk"
+  ],
+  "n_development": 16000,
+  "membership_sha256": "1603d6e29c5de95d299ae6ac0f7b712d62e8cce9a11d1bbff1a4c11e9dbbd8ef",
+  "final_test_scored": false,
+  "interest_rate_included": true,
+  "family_best": [
+    {
+      "family": "logistic",
+      "config": "logistic_C0.1_original",
+      "spec": {
+        "C": 0.1,
+        "loan_amount": "original"
+      },
+      "mean_fold_log_loss": 0.38922772525324845,
+      "pooled_oof": {
+        "roc_auc": 0.7166982386713904,
+        "average_precision": 0.3741350192787268,
+        "log_loss": 0.38922772525324845,
+        "brier_score": 0.11801420915025079,
+        "accuracy_at_0_5": 0.8483125,
+        "recall_at_0_5": 0.10091378625347636
+      }
+    },
+    {
+      "family": "random_forest",
+      "config": "random_forest_leaf50",
+      "spec": {
+        "min_samples_leaf": 50
+      },
+      "mean_fold_log_loss": 0.39650625283492674,
+      "pooled_oof": {
+        "roc_auc": 0.7017424287226891,
+        "average_precision": 0.3485405400371025,
+        "log_loss": 0.3965062528349268,
+        "brier_score": 0.12028406415598547,
+        "accuracy_at_0_5": 0.8461875,
+        "recall_at_0_5": 0.09495431068732618
+      }
+    },
+    {
+      "family": "hist_gradient_boosting",
+      "config": "hist_gb_leaves7",
+      "spec": {
+        "max_leaf_nodes": 7
+      },
+      "mean_fold_log_loss": 0.3927412388580864,
+      "pooled_oof": {
+        "roc_auc": 0.7100069891864299,
+        "average_precision": 0.35954145906421686,
+        "log_loss": 0.3927412388580864,
+        "brier_score": 0.11924403814082717,
+        "accuracy_at_0_5": 0.847875,
+        "recall_at_0_5": 0.08621374652363925
+      }
+    }
+  ],
+  "leader_by_mean_fold_log_loss": {
+    "family": "logistic",
+    "config": "logistic_C0.1_original",
+    "mean_fold_log_loss": 0.38922772525324845,
+    "oof_roc_auc": 0.7166982386713904,
+    "oof_average_precision": 0.3741350192787268,
+    "oof_brier_score": 0.11801420915025079
+  }
+}
