@@ -1,8 +1,8 @@
 # Credit-risk development (Ameriabank assignment)
 
-This folder is a **new development repo**. It trains on **14 inputs** (including `interest_rate`) and excludes only `recovery_flag_after_90d` and the target `default`.
+This project trains a probability-of-default candidate on **14 inputs** (including `interest_rate`) and excludes only `recovery_flag_after_90d` and the target `default`.
 
-It is **not** a copy of the earlier 13-input freeze. The reserved test is **not** scored here. Full discussion of `interest_rate` timing belongs in a later **validation** step.
+The reserved test is **not** scored here. Timing and leakage for `interest_rate` belong in a later **validation** step.
 
 ## Data
 
@@ -17,11 +17,11 @@ python src/train_all.py
 python src/select_winner.py
 ```
 
-Do not run a holdout evaluation until validation is planned separately.
+Validation documents (holdout still locked): `reports/validation/00_overview.md`. Do not score the reserved test until `02_holdout_protocol.md` is approved.
 
 ## Split
 
-80/20 by physical row, stratified by observed file block and target. Seeds 42 (holdout) and 43 (five development folds). After splitting we hash-check against the original membership file when it is available.
+80/20 by physical row, stratified by observed file block and target. Seeds 42 (holdout) and 43 (five development folds). Membership is saved and hashed so the split can be reused unchanged.
 
 ## Models
 
