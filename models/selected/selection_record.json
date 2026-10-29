@@ -1,0 +1,6 @@
+{
+  "family": "logistic",
+  "config": "logistic_C0.1_original",
+  "mean_fold_log_loss": 0.3892277252532484,
+  "final_test_scored": false
+}

@@ -1,0 +1,17 @@
+{
+  "family": "logistic",
+  "config": "logistic_C0.1_original",
+  "spec": {
+    "C": 0.1,
+    "loan_amount": "original"
+  },
+  "mean_fold_log_loss": 0.38922772525324845,
+  "pooled_oof": {
+    "roc_auc": 0.7166982386713904,
+    "average_precision": 0.3741350192787268,
+    "log_loss": 0.38922772525324845,
+    "brier_score": 0.11801420915025079,
+    "accuracy_at_0_5": 0.8483125,
+    "recall_at_0_5": 0.10091378625347636
+  }
+}
