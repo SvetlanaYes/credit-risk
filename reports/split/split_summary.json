@@ -1,0 +1,39 @@
+{
+  "raw_sha256": "9d69a6155fec0e9b006a4c09594f676cd4ae57a4af4ca588f2c8bd32868ca11e",
+  "membership_sha256": "1603d6e29c5de95d299ae6ac0f7b712d62e8cce9a11d1bbff1a4c11e9dbbd8ef",
+  "matches_original_membership_hash": true,
+  "used_original_assignment_file": false,
+  "final_test_scored": false,
+  "partitions": [
+    {
+      "partition": "full",
+      "rows": 20000,
+      "target_ones": 3146,
+      "target_one_rate": 0.1573,
+      "block_1": 13000,
+      "block_2": 7000,
+      "income_missing": 700,
+      "utilization_missing": 17
+    },
+    {
+      "partition": "development",
+      "rows": 16000,
+      "target_ones": 2517,
+      "target_one_rate": 0.1573125,
+      "block_1": 10400,
+      "block_2": 5600,
+      "income_missing": 563,
+      "utilization_missing": 14
+    },
+    {
+      "partition": "test",
+      "rows": 4000,
+      "target_ones": 629,
+      "target_one_rate": 0.15725,
+      "block_1": 2600,
+      "block_2": 1400,
+      "income_missing": 137,
+      "utilization_missing": 3
+    }
+  ]
+}
