@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+
+# Assignment data must not be published
+data/raw/data.pkl
+*.pkl
+
+# Large fitted trees; the selected winner is force-added if needed
+models/logistic/*.joblib
+models/random_forest/*.joblib
+models/hist_gradient_boosting/*.joblib

@@ -1,0 +1,15 @@
+{
+  "test_fraction": 0.2,
+  "holdout_random_state": 42,
+  "cv_splits": 5,
+  "cv_shuffle": true,
+  "cv_random_state": 43,
+  "target_column": "default",
+  "positive_label": 1,
+  "original_membership_sha256": "1603d6e29c5de95d299ae6ac0f7b712d62e8cce9a11d1bbff1a4c11e9dbbd8ef",
+  "original_raw_sha256": "9d69a6155fec0e9b006a4c09594f676cd4ae57a4af4ca588f2c8bd32868ca11e",
+  "notes": [
+    "Observed index blocks are file structure, not dates.",
+    "Do not score the reserved test in this development repo."
+  ]
+}

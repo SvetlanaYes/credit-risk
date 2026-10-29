@@ -1,0 +1,7 @@
+{
+  "target": "default",
+  "excluded_predictors": ["recovery_flag_after_90d"],
+  "categorical_features": ["region_risk"],
+  "interest_rate": "Included in development. Challenge timing and pricing leakage in validation.",
+  "quality_treatment": "Preserve recorded values, including age 99. No silent row drops or divide-by-ten corrections."
+}

@@ -1,0 +1,1 @@
+# Put data.pkl here (gitignored). From this folder: ln -s ../../../data.pkl data.pkl
