@@ -1,0 +1,58 @@
+{
+  "development_rows": 16000,
+  "test_rows_scored": 0,
+  "core_pass": true,
+  "development_mean_predicted": 0.15730579071918055,
+  "development_observed_rate": 0.1573125,
+  "checks": [
+    {
+      "check": "C_equals_0.1",
+      "pass": true,
+      "observed": 0.1
+    },
+    {
+      "check": "estimator_is_logistic",
+      "pass": true,
+      "observed": "LogisticRegression"
+    },
+    {
+      "check": "fourteen_model_features",
+      "pass": true,
+      "observed": [
+        "client_history_in_bank",
+        "age",
+        "income",
+        "employment_years",
+        "loan_amount",
+        "interest_rate",
+        "num_loans",
+        "credit_utilization",
+        "past_due_30",
+        "past_due_60",
+        "past_due_90",
+        "past_default",
+        "dti",
+        "region_risk"
+      ]
+    },
+    {
+      "check": "recovery_not_a_feature",
+      "pass": true,
+      "observed": true
+    },
+    {
+      "check": "development_probabilities_finite",
+      "pass": true,
+      "n": 16000
+    },
+    {
+      "check": "development_probabilities_in_unit_interval",
+      "pass": true
+    },
+    {
+      "check": "hand_logistic_matches_predict_proba",
+      "pass": true,
+      "max_abs_difference": 0.0
+    }
+  ]
+}

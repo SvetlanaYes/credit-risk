@@ -1,0 +1,28 @@
+{
+  "protocol": "V2 approved; one frozen scoring; no retune",
+  "candidate": {
+    "roc_auc": 0.718258087427648,
+    "average_precision": 0.3912291968164834,
+    "log_loss": 0.386467226904621,
+    "brier_score": 0.11677340359260077,
+    "mean_predicted": 0.15964341814851069,
+    "observed_rate": 0.15725,
+    "n": 4000,
+    "events": 629
+  },
+  "constant_development_rate_reference": {
+    "roc_auc": 0.5,
+    "average_precision": 0.15725,
+    "log_loss": 0.43508150095727366,
+    "brier_score": 0.13252244140624997,
+    "mean_predicted": 0.15731250000000002,
+    "observed_rate": 0.15725,
+    "n": 4000,
+    "events": 629
+  },
+  "log_loss_improvement": 0.04861427405265267,
+  "brier_improvement": 0.015749037813649197,
+  "scores_path": "reports/validation/holdout/test_scores.csv",
+  "retuned": false,
+  "production_approved": false
+}

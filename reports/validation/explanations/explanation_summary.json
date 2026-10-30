@@ -1,0 +1,10 @@
+{
+  "intercept": -1.7324841449820376,
+  "C": 0.1,
+  "n_coefficients": 18,
+  "example_source_row_id": 0,
+  "example_log_odds": -2.318961951401503,
+  "example_probability": 0.08956466870754776,
+  "pipeline_probability": 0.08956466870754776,
+  "shap_used": false
+}

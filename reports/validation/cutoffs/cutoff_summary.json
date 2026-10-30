@@ -1,0 +1,64 @@
+{
+  "source": "development OOF quantiles of logistic C=0.1 original; applied to saved test scores",
+  "oof_mean": 0.15735973974506373,
+  "rows": [
+    {
+      "rule": "top_10_percent_of_development_oof",
+      "threshold": 0.31690203369366593,
+      "n": 4000,
+      "flag_rate": 0.0955,
+      "defaults_captured": 179,
+      "capture_rate": 0.2845786963434022,
+      "non_defaults_flagged": 203,
+      "false_flag_rate_among_non_defaults": 0.060219519430436075,
+      "event_rate_among_flagged": 0.468586387434555,
+      "event_rate_below_cutoff": 0.12437810945273632,
+      "n_below": 3618,
+      "development_oof_share": 0.1
+    },
+    {
+      "rule": "top_20_percent_of_development_oof",
+      "threshold": 0.21893535034270142,
+      "n": 4000,
+      "flag_rate": 0.20725,
+      "defaults_captured": 290,
+      "capture_rate": 0.4610492845786963,
+      "non_defaults_flagged": 539,
+      "false_flag_rate_among_non_defaults": 0.15989320676357163,
+      "event_rate_among_flagged": 0.3498190591073583,
+      "event_rate_below_cutoff": 0.10690633869441817,
+      "n_below": 3171,
+      "development_oof_share": 0.2
+    },
+    {
+      "rule": "top_30_percent_of_development_oof",
+      "threshold": 0.16597477716308598,
+      "n": 4000,
+      "flag_rate": 0.3025,
+      "defaults_captured": 363,
+      "capture_rate": 0.5771065182829889,
+      "non_defaults_flagged": 847,
+      "false_flag_rate_among_non_defaults": 0.25126075348561255,
+      "event_rate_among_flagged": 0.3,
+      "event_rate_below_cutoff": 0.0953405017921147,
+      "n_below": 2790,
+      "development_oof_share": 0.3
+    },
+    {
+      "rule": "diagnostic_0.5_not_a_policy",
+      "threshold": 0.5,
+      "n": 4000,
+      "flag_rate": 0.0315,
+      "defaults_captured": 84,
+      "capture_rate": 0.13354531001589826,
+      "non_defaults_flagged": 42,
+      "false_flag_rate_among_non_defaults": 0.012459210916641946,
+      "event_rate_among_flagged": 0.6666666666666666,
+      "event_rate_below_cutoff": 0.14068146618482189,
+      "n_below": 3874,
+      "development_oof_share": null
+    }
+  ],
+  "policy": false,
+  "costs_unknown": true
+}
