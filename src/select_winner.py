@@ -41,7 +41,6 @@ def main() -> None:
         f"- Development OOF Brier: {winner['oof_brier_score']:.6f}",
         "",
         "Fourteen inputs including `interest_rate`. Recovery flag excluded.",
-        "Do not treat this as the old 13-input logistic C=0.1 freeze.",
         "",
         "See `family_comparison.csv` for the three family-best rows.",
         "",

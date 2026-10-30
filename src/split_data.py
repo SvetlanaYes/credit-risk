@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import shutil
 import sys
 from pathlib import Path
 
@@ -16,7 +15,6 @@ from sklearn.model_selection import StratifiedKFold, train_test_split
 from dataset import (
     ASSIGNMENTS_PATH,
     CONFIG_DIR,
-    ORIGINAL_MEMBERSHIP_SHA256,
     PROJECT_ROOT,
     RAW_DATA,
     SPLITS_DIR,
@@ -29,9 +27,6 @@ from dataset import (
 from plots import save_grouped_bars
 
 REPORT_DIR = PROJECT_ROOT / "reports" / "split"
-ORIGINAL_ASSIGNMENTS = Path(
-    "/Users/admin/Documents/Codex/2026-10-21/ww/outputs/ameria-credit-risk/data/splits/partition_assignments.csv"
-)
 
 
 def build_assignments(data: pd.DataFrame, plan: dict) -> pd.DataFrame:
@@ -100,16 +95,8 @@ def main() -> None:
     data = load_raw_data()
     raw_hash = sha256_file(RAW_DATA)
     generated = build_assignments(data, plan)
-
-    used_original_file = False
     generated.to_csv(ASSIGNMENTS_PATH, index=False)
     membership_hash = sha256_file(ASSIGNMENTS_PATH)
-    if membership_hash != ORIGINAL_MEMBERSHIP_SHA256:
-        if ORIGINAL_ASSIGNMENTS.exists():
-            shutil.copy(ORIGINAL_ASSIGNMENTS, ASSIGNMENTS_PATH)
-            used_original_file = True
-            membership_hash = sha256_file(ASSIGNMENTS_PATH)
-        # If the original file is missing, keep the generated split and record the mismatch.
 
     membership = pd.read_csv(ASSIGNMENTS_PATH, dtype={"cv_fold": "Int64"})
     stats = pd.DataFrame([
@@ -147,8 +134,6 @@ def main() -> None:
     summary = {
         "raw_sha256": raw_hash,
         "membership_sha256": membership_hash,
-        "matches_original_membership_hash": membership_hash == ORIGINAL_MEMBERSHIP_SHA256,
-        "used_original_assignment_file": used_original_file,
         "final_test_scored": False,
         "partitions": stats.to_dict(orient="records"),
     }
@@ -162,15 +147,13 @@ def main() -> None:
             "and not independent validation. Missingness was not used to search for a convenient split.",
             "",
             f"- Membership SHA-256: `{membership_hash}`",
-            f"- Matches original recorded hash: {summary['matches_original_membership_hash']}",
-            f"- Copied original assignment file after a seed mismatch: {used_original_file}",
             "",
             "See `partition_sizes.csv` for row counts, target rates, block mix, and missingness.",
             "",
         ])
     )
     print(f"Wrote split reports under {REPORT_DIR}")
-    print(f"membership hash {membership_hash} original_match={summary['matches_original_membership_hash']}")
+    print(f"membership hash {membership_hash}")
 
 
 if __name__ == "__main__":

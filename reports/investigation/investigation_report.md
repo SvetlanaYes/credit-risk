@@ -7,7 +7,7 @@ Recorded values were **not** changed. Age 99 and other flags are left as-is.
 - Target = 1: 3146 (15.73%)
 - Unique pandas index: False (repeated labels are not treated as customer IDs)
 - Features that will be modelled later: client_history_in_bank, age, income, employment_years, loan_amount, interest_rate, num_loans, credit_utilization, past_due_30, past_due_60, past_due_90, past_default, dti, region_risk
-- Excluded from models: `recovery_flag_after_90d` (timing). `interest_rate` is included now; validation will challenge it.
+- Excluded from models: `recovery_flag_after_90d` (timing). `interest_rate` is included; validation will challenge its timing.
 
 ## Quality flags (not automatic deletions)
 

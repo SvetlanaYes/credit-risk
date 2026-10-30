@@ -11,6 +11,5 @@ This is not production approval and not a reserved-test result.
 - Development OOF Brier: 0.118014
 
 Fourteen inputs including `interest_rate`. Recovery flag excluded.
-Do not treat this as the old 13-input logistic C=0.1 freeze.
 
 See `family_comparison.csv` for the three family-best rows.

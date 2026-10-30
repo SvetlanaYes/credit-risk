@@ -16,8 +16,6 @@ SPLITS_DIR = PROJECT_ROOT / "data" / "splits"
 ASSIGNMENTS_PATH = SPLITS_DIR / "partition_assignments.csv"
 TARGET = "default"
 EXCLUDED_PREDICTORS = ["recovery_flag_after_90d"]
-ORIGINAL_MEMBERSHIP_SHA256 = "1603d6e29c5de95d299ae6ac0f7b712d62e8cce9a11d1bbff1a4c11e9dbbd8ef"
-ORIGINAL_RAW_SHA256 = "9d69a6155fec0e9b006a4c09594f676cd4ae57a4af4ca588f2c8bd32868ca11e"
 
 
 def sha256_file(path: Path) -> str:

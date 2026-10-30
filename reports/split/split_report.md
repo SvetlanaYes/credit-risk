@@ -5,7 +5,5 @@ This test is a holdout of physical rows from the same file mixture. It is not ou
 and not independent validation. Missingness was not used to search for a convenient split.
 
 - Membership SHA-256: `1603d6e29c5de95d299ae6ac0f7b712d62e8cce9a11d1bbff1a4c11e9dbbd8ef`
-- Matches original recorded hash: True
-- Copied original assignment file after a seed mismatch: False
 
 See `partition_sizes.csv` for row counts, target rates, block mix, and missingness.

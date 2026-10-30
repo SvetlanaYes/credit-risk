@@ -119,7 +119,7 @@ def main() -> None:
             f"- Target = 1: {summary['target_ones']} ({100 * summary['target_one_rate']:.2f}%)",
             f"- Unique pandas index: {summary['index_is_unique']} (repeated labels are not treated as customer IDs)",
             f"- Features that will be modelled later: {', '.join(features)}",
-            "- Excluded from models: `recovery_flag_after_90d` (timing). `interest_rate` is included now; validation will challenge it.",
+            "- Excluded from models: `recovery_flag_after_90d` (timing). `interest_rate` is included; validation will challenge its timing.",
             "",
             "## Quality flags (not automatic deletions)",
             "",
