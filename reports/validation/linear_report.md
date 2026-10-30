@@ -75,7 +75,7 @@ The pandas index is not unique: 7,000 extra repeated index labels. When the orig
 **DTI** is usually “debt relative to income.” If `dti` in this file is loan over income, then for rows with income filled in:
 
 $$
-\frac{\text{loan\_amount}}{\text{income}\times\text{dti}}\approx 1
+\frac{\mathrm{loan\ amount}}{\mathrm{income}\times\mathrm{dti}}\approx 1
 $$
 
 Tiny example: income 2,000 and DTI 0.5 should go with loan 1,000 (ratio 1). Loan 10,000 with the same income and DTI gives ratio 10: units or a keying error.
